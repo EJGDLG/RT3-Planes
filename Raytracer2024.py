@@ -6,8 +6,8 @@ from material import *
 from lights import *
 from texture import Texture
 
-width = 500
-height = 420
+width = 800
+height = 720
 
 screen = pygame.display.set_mode((width, height), pygame.SCALED)
 clock = pygame.time.Clock()
@@ -43,7 +43,7 @@ rt.scene.append(Disk(position = [0,-1.5,-5], normal = [0,1,0], radius = 1.7, mat
 rt.scene.append(SquarePlane(position=[-7.6, 0,5], normal=[70,0,10], size=8, material=white_material))
 rt.scene.append(SquarePlane(position=[7.6, 0,5], normal=[-70,0,10], size=8, material=white_material))
 
-rt.scene.append(SquarePlane(position=[0, 0, -4.5], normal=[0,0,10], size=1.6, material=texture2))
+rt.scene.append(SquarePlane(position=[0, 0, -4.5], normal=[0,0,10], size=1.6, material=brick))
 
 rt.scene.append(Plane(position = [0,6,-5], normal = [1,0,0], material = blueMirror))
 rt.scene.append(Plane(position = [0,-6,-5], normal = [0,-2,0], material = grass))
@@ -54,7 +54,7 @@ rt.scene.append(Plane(position = [0,-6,-5], normal = [0,-2,0], material = grass)
 rt.glRender()
 
 # Guardar la imagen como output.bmp
-pygame.image.save(screen, "C:/Users/DeLeon/Documents/GitHub/RT3-Planes/Raytracer2024/Raytracer2024/output.bmp")
+pygame.image.save(screen, "C:/Users/DeLeon/Documents/GitHub/RT3-Planes/Raytracer2024/Raytracer2024/output3.bmp")
 
 isRunning = True
 while isRunning:
